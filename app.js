@@ -3,9 +3,9 @@ const app = express();
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const cors = require("cors");
-require("dotenv/config");
 const authJwt = require("./helpers/jwt");
 const errorhandler = require("./helpers/error-handler");
+require("dotenv/config");
 
 const api = process.env.API_URL;
 const productRouter = require("./routers/product");
