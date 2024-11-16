@@ -12,11 +12,12 @@ function authJwt() {
       { url: /\/api\/v1\/category(.*)/, method: ["GET", "OPTIONS"] },
       `${api}/user/validateLogin`,
       `${api}/user/register`,
+      `${api}/order`,
     ],
   });
 }
 async function isRevoked(req, payload, done) {
-  console.log(payload.payload);
+  console.log("isrevoke *** " + payload.payload);
   if (!payload.payload.isAdmin) {
     return true;
   }
